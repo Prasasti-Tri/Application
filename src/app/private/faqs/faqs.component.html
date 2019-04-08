@@ -1,0 +1,14 @@
+
+
+        <!-- <h2>FAQs</h2> -->
+        <div id="wrapper">
+            <ul *ngFor="let items of posts"><!--for loop on the response to get each value of response -->
+                <li>
+                    <input type="checkbox" checked>
+                    <i></i>
+                    <h3>{{items.question}}</h3>
+                    <p>{{items.answer}}</p>
+                </li>
+            </ul>
+        </div>
+        

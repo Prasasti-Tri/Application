@@ -1,0 +1,20 @@
+
+ <!-- <p style="color:gray"> 
+  MY  -->
+  <!--span is used to get 'BOOKINGS' on the same line with 'MY'-->
+  <!-- <span style="color: forestgreen">BOOKINGS 
+</span> 
+</p> <br>  -->
+<div class="box">
+  <nav> 
+  <ul> 
+  <!--navigating to the upcoming data-->
+  <li class="item"><a routerLink = "/private/navbar/mybookings/upcoming">UPCOMING</a></li> 
+  <!--navigating to the past data-->
+  <li class="item"><a routerLink = "/private/navbar/mybookings/past">PAST</a></li> 
+  
+  </ul> 
+  </nav> 
+  <!--in order to view upcoming and past data because upcoming and past are children of my bookings component-->
+  <router-outlet></router-outlet>
+  </div>

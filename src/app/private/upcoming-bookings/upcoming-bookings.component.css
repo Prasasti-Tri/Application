@@ -1,0 +1,28 @@
+ul{ 
+    border: 1px solid gray; 
+    border-radius: 3px; 
+    padding: 7px; 
+    margin-bottom: 30px;
+    width: 70%;
+    margin-left: 7.3%;
+    /* float: left; */
+ 
+    } 
+    #s{ 
+    float: right; 
+    color: red ; 
+    /* font-style: bold;  */
+    font-weight: 20px;
+    } 
+    #date{ 
+    color:gray; 
+    float:top; 
+    } 
+    #name{ 
+    font-size: 30px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    color:#566573 
+    } 
+    #add{ 
+    color: #707B7C 
+    }

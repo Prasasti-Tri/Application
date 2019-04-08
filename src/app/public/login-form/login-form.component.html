@@ -1,0 +1,43 @@
+<div class="container">
+    <h2>LOGIN</h2>
+    <hr>
+    <!--Start of reactive form-->
+    <form [formGroup]="angForm" (ngSubmit)="login()" novalidate>
+        <!--start of first form element-->
+        <div class="form-group">
+          <label class="center-block">USERNAME
+            <input typr="text" class="form-control" formControlName="username"  autocomplete="off">
+          </label>
+        </div>
+        <!--End of first form element-->
+        <div *ngIf="angForm.controls['username'].invalid && (angForm.controls['username'].dirty || angForm.controls['username'].touched)" class="alert alert-danger">
+            <div *ngIf="angForm.controls['username'].errors.required">
+            Username is required.
+          </div>
+        </div>
+
+        <!--Start of second form element-->
+        <div class="form-group">
+            <label class="center-block">PASSWORD
+              <input class="form-control" formControlName="password"  type="password" autocomplete="off">
+            </label>
+          </div>
+          <div *ngIf="angForm.controls['password'].invalid && (angForm.controls['password'].dirty || angForm.controls['password'].touched)" class="alert alert-danger">
+              <div *ngIf="angForm.controls['password'].errors.required">
+              Passwoord is required.
+            </div>
+            <div *ngIf="angForm.controls['password'].errors.minlength">Password must be at least 6 characters</div>
+          </div>
+          <!--End of second form element-->
+
+
+          <!--Start of submit button-->
+          <div class="form-group">
+              <button type="submit"
+              [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
+              Login
+            </button>
+            </div>
+          <!--End of submit button--> 
+  </form>
+  </div>

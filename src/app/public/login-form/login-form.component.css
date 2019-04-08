@@ -1,0 +1,12 @@
+h2{
+    color: #4CAF50;
+}
+label{
+    color: lightgrey;
+    font-size: 10px;
+    /* font-family: 'Roboto'; */
+}
+.container{
+    width: 60%;
+    margin-top: 10%;
+}

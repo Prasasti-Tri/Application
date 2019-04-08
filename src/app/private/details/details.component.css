@@ -1,0 +1,33 @@
+/*button's size and positions are maintained*/
+button{
+    width: 190px;
+    margin-left: 10%;
+    margin-top: 18%;
+    padding: 6.5px;
+    font-size: 10px;
+}
+/*Text above text field's color is set to lightgray*/
+label{
+    color: lightgray;
+}
+/*Heading is set to h2 properties*/
+h2{
+    color: #4CAF50;
+    text-align: center;
+    font-size: 17px;
+}
+/*whole form is given a box property*/
+form{
+     padding: 5%;
+    margin-bottom: 2%;   
+    box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+   
+}
+/*Logo's size and position is set to img properties*/
+img{
+    height: 100px;
+    width: auto;
+    border-radius: 50%;
+    margin-left: 25%;  
+}
+

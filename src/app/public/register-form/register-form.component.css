@@ -1,0 +1,52 @@
+
+h2{
+    color: #4CAF50;
+    margin-left: 10%;
+}
+hr{
+    margin-left: 10%;
+}
+.button{
+background-color: #4CAF50;     
+border: none; 
+color: white; 
+padding: 10px 32px; 
+text-align: center; 
+text-decoration: none; 
+display: inline-block; 
+font-size: 15px; 
+/* margin-left: 20%; 
+margin-right: 20%; */
+cursor: pointer;
+width:30%; 
+/* font-family: 'Roboto'; */
+display:inline-block;
+}
+label{
+    color: lightgrey;
+    font-size: 10px;
+    /* font-family: 'Roboto'; */
+}
+#linkingDiv{
+    /* margin-left: 20%; */
+    background-color: lightgray;
+    padding-top: 3px;
+    margin-left: 10%;
+    
+}
+p{
+   text-align: center;
+}
+.go{
+    text-align: center;
+   
+}
+.container{
+    /* width:60%; */
+    margin-top: 7%;
+}
+form{
+
+    margin-left: 10%;
+    
+}

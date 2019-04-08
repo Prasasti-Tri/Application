@@ -1,0 +1,40 @@
+<header class="header__navbar">
+
+<!--To move navbar contents to the right-->    
+<ul class="nav justify-content-right">
+    <!--Start of dropdown--> 
+    <li class="nav-item dropdown" id="drop"> 
+    <!--To display full name along with dropdown contents-->    
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{name}}</a>
+    <!--Start of dropdown items' list--> 
+    <div class="dropdown-menu"> 
+    <!--First dropdown item-->    
+    <a class="dropdown-item" routerLink="/private/navbar/details">Profile</a> 
+    <!--Second dropdown item-->
+    <a class="dropdown-item" routerLink="/private/navbar/mybookings/upcoming">My Bookings
+    <span>({{count}})</span></a> 
+    <!--Third dropdown item-->
+    <a class="dropdown-item" routerLink="/private/navbar/faqs">FAQs</a> 
+    <hr>
+    <!--Fourth dropdown item-->
+    <a class="dropdown-item" routerLink="/public/login" (click)="logout()">Logout</a> 
+    </div>
+    <!--End of dropdown items' list--> 
+    </li> 
+    <!--End of dropdown-->
+</ul>
+<!--End of navbar contents-->
+</header><br><br><br><br>
+
+<!--To display headings for different dropdown items-->
+<h2>{{header}}</h2>
+<p style="color:gray"> 
+        {{my}} 
+        <!--span is used to get 'BOOKINGS' on the same line with 'MY'-->
+        <span style="color: forestgreen">{{bookings}}
+      </span> 
+      </p> <br>
+<h2>{{header2}}</h2>
+<!--End of headings-->
+
+<router-outlet></router-outlet>

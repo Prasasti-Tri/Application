@@ -1,0 +1,167 @@
+<div class="container">
+<h2>REGISTER</h2>
+<hr>
+<!--Start of form-->
+<form [formGroup]="form" (ngSubmit)="register()">
+  
+      <div *ngIf="form.errors" class="alert alert-danger">Any field is invalid</div> 
+
+    <!--Start of first form row-->  
+    <div class="form-group row">
+    <!--Start of first element-->
+    <div class="col-xs-5">
+        <label for="firstName"> FIRST NAME</label>
+        <input 
+        formControlName="firstName"
+        id="firstName" 
+        type="text" 
+        class="form-control"
+        autocomplete="off"
+        [ngClass]="{ 'is-invalid': f.firstName.errors && f.firstName.touched}">
+       
+        <div *ngIf= "f.firstName.touched && f.firstName.invalid" class="invalid-feedback">
+       
+        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+      
+    </div><!--End of first element-->
+ 
+     <!--Start of sec element-->
+      <div class="col-xs-5">
+          <label for="lastName"> LAST NAME</label>
+          <input 
+          formControlName="lastName"
+          id="lastName" 
+          type="text" 
+          class="form-control"
+          autocomplete="off"
+          [ngClass]="{'is-invalid': f.lastName.errors && f.lastName.touched}">
+      
+          <div *ngIf=" f.lastName.errors && f.lastName.touched" class="invalid-feedback">
+        
+          <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+          </div>
+         
+          
+      </div><!--End of second element-->
+    </div>
+    <!--End of first form row-->
+
+
+    <!--Start of second form row-->
+    <div class="form-group row">
+      <div class="col-xs-5">
+              <label for="username">EMAIL ADDRESS</label>
+              <input 
+              formControlName="username"
+              id="username" 
+              type="text" 
+              class="form-control"
+              autocomplete="off"
+              [ngClass]="{'is-invalid':  f.username.errors && f.username.touched}">
+             
+              <div *ngIf=" f.username.errors && f.username.touched" class="invalid-feedback">
+             
+              <div *ngIf="f.username.errors.required">Username is required</div>
+              <div *ngIf="f.username.errors.email">Email must be a valid email address</div>
+              </div>
+      </div>
+      <div class="col-xs-5">
+                <label for="phoneNo">PHONE NUMBER</label>
+                <input 
+                formControlName="phoneNo"
+                id="phoneNo" 
+                type="tel" 
+                pattern="[1-9]{1}[0-9]{9}"
+                class="form-control"
+                autocomplete="off"
+                [ngClass]="{'is-invalid':  f.phoneNo.errors && f.phoneNo.touched}">
+                <!-- It is numeric.It will be max of 10 chars.First digit is not zero -->
+                
+                <div *ngIf="f.phoneNo.errors && f.phoneNo.touched" class="invalid-feedback">
+                
+                <div *ngIf="f.phoneNo.errors.required">Phone Number is required (Should be a 10 digit entry)</div>
+                <div *ngIf="f.phoneNo.errors.invalid">Phone Number is invalid</div>
+                </div>
+      </div>
+    </div>
+    <!--End of sec form row-->
+
+    <!--Start of third form row-->
+    <div class="form-group row">
+      <div class="col-xs-5">
+            <label for="address">ADDRESS</label>
+            <input 
+            formControlName="address"
+            id="address" 
+            type="text" 
+            class="form-control"
+            autocomplete="off"
+            [ngClass]="{'is-invalid': f.address.errors && f.address.touched}">
+          
+            <div *ngIf="f.address.errors && f.address.touched" class="invalid-feedback">
+      
+            <div *ngIf="f.address.errors.required">Address is required</div>
+            </div>
+      </div>
+      <div class="col-xs-5">
+            <label for="brief">BRIEF MEDICAL HISTORY OF THE PATIENT (OPTIONAL)</label>
+            <input 
+            id="brief" 
+            type="text" 
+            class="form-control"
+            autocomplete="off">
+      </div>
+    </div>
+    <!--End of third form row-->
+
+    <!--Start of fourth form row-->
+    <div class="form-group row">
+      <div class="col-xs-5">
+            <label for="password">PASSWORD</label>
+            <input
+                formControlName="password"
+                id="password" 
+                type="password" 
+                class="form-control"
+                [ngClass]="{'is-invalid': f.password.errors && f.password.touched}">
+              
+                <div *ngIf="f.password.errors && f.password.touched" class="invalid-feedback">
+           
+            <div *ngIf="f.password.errors.required ">Password is required</div>
+            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+      </div>
+      <div class="col-xs-5">
+            <label for="confirmPswd">CONFIRM PASSWORD</label>
+            <input
+                formControlName="confirmPswd"
+                id="confirmPswd" 
+                type="password" 
+                class="form-control"
+                [ngClass]="{'is-invalid': f.confirmPswd.errors && f.confirmPswd.touched}">
+             
+                <div *ngIf="f.confirmPswd.errors && f.confirmPswd.touched" class="invalid-feedback">
+           
+            <div *ngIf="f.confirmPswd.errors.required">Retype the password</div>
+            <div *ngIf="f.confirmPswd.errors.mustMatch">Passwords must match</div>
+            </div>
+    </div>
+    </div>
+    <!--End of fourth form row-->
+    <br>
+    <br>
+
+   <div class="go">
+  <button class="button">REGISTER</button>
+   </div>
+   
+</form>
+<!--End of form-->
+<br><br>
+<div id="linkingDiv">
+    <p>Existing User? &nbsp;
+    <a routerLink = '/public/login'>Go to Login Page</a>
+  </p>
+  </div> 
+</div>

@@ -1,0 +1,107 @@
+<div class="container">
+    <!-- <h2>PROFILE</h2> -->
+   <br>
+   <!--Start of a form-->
+    <form [formGroup]="Form" (ngSubmit)="update()" novalidate>
+
+        <img src="./assets/icon/icon.png" alt="icon-image" class="logo">
+
+       
+        <!--Making of first form row-->
+      <div class="form-group row">
+        <!--Making of first form field-->
+        <div class="col-xs-5">
+            <label for="fullName"> FULL NAME</label>
+            <input 
+            formControlName="fullName"
+            type="text" 
+            class="form-control"
+            autocomplete="off">
+            <div *ngIf="Form.controls['fullName'].invalid && (Form.controls['fullName'].dirty || Form.controls['fullName'].touched)" class="alert alert-danger">
+                <div *ngIf="Form.controls['fullName'].errors.required">
+                    First name is required.
+                </div>
+            </div>
+         </div><!--Ending of first form field-->
+
+        <!--Start of sec form field-->
+        <div class="col-xs-5">
+            <label for="username">EMAIL ADDRESS</label>
+            <input 
+            formControlName="username"
+            id="username" 
+            type="text" 
+            class="form-control"
+            autocomplete="off">
+            <div *ngIf="Form.controls['username'].invalid && (Form.controls['username'].dirty || Form.controls['username'].touched)" class="alert alert-danger">
+                <div *ngIf="Form.controls['username'].errors.required">
+                    Email is required.
+                </div>
+                <div *ngIf="Form.controls['username'].errors.email">
+                    Email is not valid.
+                </div>
+            </div>
+         </div><!--End of sec form field-->
+
+        </div><!--End of first form row-->
+
+        <!--Start of sec form row-->
+        <div class="form-group row">
+
+            <div class="col-xs-5"><!--First field-->
+                <label for="phoneNo">PHONE NUMBER</label>
+                <input 
+                formControlName="phoneNo" 
+                type="text" 
+                class="form-control"
+                autocomplete="off">
+                <div *ngIf="Form.controls['phoneNo'].invalid && (Form.controls['phoneNo'].dirty || Form.controls['phoneNo'].touched)" class="alert alert-danger">
+                    <div *ngIf="Form.controls['phoneNo'].errors.required">
+                        Phoneno. is required.
+                    </div>
+                </div>
+             </div><!--End of first field-->
+    
+            <div class="col-xs-5"><!--Sec field-->
+                <label for="address"> ADDRESS</label>
+                <input 
+                formControlName="address" 
+                type="text" 
+                class="form-control"
+                autocomplete="off">
+                <div *ngIf="Form.controls['address'].invalid && (Form.controls['address'].dirty || Form.controls['address'].touched)" class="alert alert-danger">
+                    <div *ngIf="Form.controls['address'].errors.required">
+                        Address is required.
+                    </div>
+                </div>
+             </div><!--End of sec field-->
+             
+            </div><!--End of sec form row-->
+
+            <div class="form-group row"><!--Start of third row-->
+
+                <div class="col-xs-5"><!--First row-->
+                    <label for="brief">BRIEF MEDICAL HISTORY OF THE PATIENT</label>
+                    <input 
+                    formControlName="brief" 
+                    type="text" 
+                    class="form-control"
+                    autocomplete="off">
+                 </div><!--End of first row-->
+                
+        
+                <span class="form-group" >
+                    
+                        <button type="submit"
+                        [disabled]="Form.pristine || Form.invalid" class="btn btn-success">
+                        UPDATE PROFILE
+                      </button>
+                      
+                      </span>
+                 
+                </div><!--End of third row-->
+            
+                
+              
+  </form>
+  </div>
